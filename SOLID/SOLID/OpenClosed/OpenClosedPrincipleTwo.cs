@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID.OpenClose
+namespace SOLID.OpenClosed
 {
-    public class DatabaseOpenClose
+    public class DatabaseOpenClosed
     {
         public void Add(string postMessage)
         {
@@ -24,11 +24,11 @@ namespace SOLID.OpenClose
         }
     }
 
-    class OpenClosePrincipleTwoNonCompliant
+    class OpenClosedPrincipleTwoNonCompliant
     {
         public class Post
         {
-            public void CreatePost(DatabaseOpenClose db, string postMessage)
+            public void CreatePost(DatabaseOpenClosed db, string postMessage)
             {
                 if (postMessage.StartsWith("@"))
                 {
@@ -48,14 +48,14 @@ namespace SOLID.OpenClose
         }
     }
 
-    class OpenClosePrincipleTwo
+    class OpenClosedPrincipleTwo
     {
         /*
          * By using Inheritance, it is much easier to create extended behaviour to the Post object by oerriding the CreatePost() method.
          */
         public class Post
         {
-            public virtual void CreatePost(DatabaseOpenClose db, string postMessage)
+            public virtual void CreatePost(DatabaseOpenClosed db, string postMessage)
             {
                 db.Add(postMessage);
             }
@@ -63,7 +63,7 @@ namespace SOLID.OpenClose
 
         public class TagPost : Post
         {
-            public override void CreatePost(DatabaseOpenClose db, string postMessage)
+            public override void CreatePost(DatabaseOpenClosed db, string postMessage)
             {
                 db.AddAsTag(postMessage);
             }
@@ -71,7 +71,7 @@ namespace SOLID.OpenClose
 
         public class HashTagPost : Post
         {
-            public override void CreatePost(DatabaseOpenClose db, string postMessage)
+            public override void CreatePost(DatabaseOpenClosed db, string postMessage)
             {
                 db.AddAsHashTag(postMessage);
             }

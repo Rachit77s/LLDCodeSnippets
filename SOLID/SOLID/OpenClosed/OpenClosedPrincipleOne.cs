@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID.OpenClose
+namespace SOLID.OpenClosed
 {
     public class Database
     {
@@ -24,7 +24,7 @@ namespace SOLID.OpenClose
         }
     }
 
-    public class OpenClosePrincipleOneNonCompliant
+    public class OpenClosedPrincipleOneNonCompliant
     {
         public class Customer
         {
@@ -50,7 +50,7 @@ namespace SOLID.OpenClose
         }
     }
 
-    public class OpenClosePrincipleOne
+    public class OpenClosedPrincipleOne
     {
         public class Customer
         {
