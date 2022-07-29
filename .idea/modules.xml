@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StrategyDesignPatternOnCricket.iml" filepath="$PROJECT_DIR$/StrategyDesignPatternOnCricket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LLDCodeSnippets.iml" filepath="$PROJECT_DIR$/LLDCodeSnippets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/TicTacToe/TicTacToe.iml" />
     </modules>
   </component>
 </project>
