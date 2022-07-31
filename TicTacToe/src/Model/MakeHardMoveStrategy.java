@@ -1,8 +1,10 @@
 package Model;
 
-public class MakeHardMoveStrategy implements IBotPlayingStrategy{
+import Strategies.BotPlayingStrategies.IBotPlayingStrategy;
+
+public class MakeHardMoveStrategy implements IBotPlayingStrategy {
     @Override
-    public Cell MakeMove(Board board, Symbol symbol) {
+    public Move MakeMove(Board board, Symbol symbol) {
         return null;
     }
 }
