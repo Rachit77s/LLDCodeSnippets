@@ -1,0 +1,30 @@
+package Model;
+
+import java.util.Scanner;
+
+public class HumanPlayer extends Player{
+
+    HumanPlayer(PlayerType type, Symbol symbol) {
+        super(type.HUMAN, symbol);
+    }
+
+    @Override
+    public Move MakeMove(Board board) {
+
+        Scanner myObj = new Scanner(System.in);
+
+        System.out.println("Tell Row Number starting from 1");
+        int row = myObj.nextInt();
+
+        System.out.println("Tell Column Number where you want to make the move from 1");
+        int col = myObj.nextInt();
+
+        // Make move
+        Move move = new Move();
+        move.setCell(board.getCell(row-1, col-1));
+        move.setPlayer(this);
+        move.setSymbol(this.getSymbol());
+
+        return move;
+    }
+}

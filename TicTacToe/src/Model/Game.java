@@ -1,5 +1,6 @@
 package Model;
 
+import Exceptions.EmptyMovesUndoOperationException;
 import Exceptions.MultipleBotException;
 import Strategies.GameWinningStrategies.IGameWinningStrategy;
 
@@ -16,6 +17,7 @@ public class Game {
     GameStatus gameStatus;
     // Show who the winner is
     Player winner;
+    private int noOfFilledCells = 0;
 
     public List<Player> getPlayers() {
         return players;
@@ -51,8 +53,31 @@ public class Game {
         this.gameStatus = GameStatus.INPROGRESS;
     }
 
-    public void makeMove(){
+    public boolean undo() throws EmptyMovesUndoOperationException {
+        // If the move size is 0, we can't undo.
+        if (this.moves.size() == 0) {
+            // Handle Edge Case
+            throw new EmptyMovesUndoOperationException();
+        }
 
+        // Steps: Clear the last move cell, delete it from the move column,
+        // reduce the turn by one, and we are done.
+        //  0      1      2     3
+        // [Cell1 Cell2 Cell3 Cell4]
+        //  0      1      2
+        // [Cell1 Cell2 Cell3]
+
+        // Out of the list of last moves, get the last move.
+        Move lastMove = this.moves.get(this.moves.size() - 1);
+        // Get the cell of that last move.
+        Cell relevantCell = lastMove.getCell();
+        relevantCell.clearCell();
+        // Reduce the move by 1.
+        this.lastMovedPlayerIndex -= 1;
+        // Subtracting 1 by modular arithmetic
+        this.lastMovedPlayerIndex = (this.lastMovedPlayerIndex + this.players.size()) % this.players.size();
+        this.moves.remove(lastMove);
+        return true;
     }
 
     public static class Builder

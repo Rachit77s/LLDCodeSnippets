@@ -1,15 +1,12 @@
 package Strategies.BotPlayingStrategies;
 
-import Model.Board;
-import Model.Cell;
-import Model.Move;
-import Model.Symbol;
+import Model.*;
 
 import java.util.List;
 
 public class RandomBotPlayingStrategy implements IBotPlayingStrategy{
     @Override
-    public Move MakeMove(Board board, Symbol symbol) {
+    public Move MakeNextMove(Board board, Player player) {
 
         // Whenever we find an empty cell, let's put a symbol there.
         // Go through the grid row by row, once we find a cell that is empty,
@@ -20,7 +17,7 @@ public class RandomBotPlayingStrategy implements IBotPlayingStrategy{
                 if (cell.isEmpty()){
                     // If cell is empty, we will make a move
                     Move move = new Move();
-                    move.setSymbol(symbol);
+                    move.setSymbol(player.getSymbol());
                     move.setCell(cell);
                     return move;
                 }

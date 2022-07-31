@@ -18,6 +18,6 @@ public class Bot extends Player{
 
     @Override
     public Move MakeMove(Board board) {
-        return null;
+        return this.botPlayingStrategy.MakeNextMove(board, this);
     }
 }

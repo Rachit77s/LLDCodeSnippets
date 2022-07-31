@@ -1,10 +1,7 @@
 package Strategies.BotPlayingStrategies;
 
-import Model.Board;
-import Model.Cell;
-import Model.Move;
-import Model.Symbol;
+import Model.*;
 
 public interface IBotPlayingStrategy {
-    Move MakeMove(Board board, Symbol symbol);
+    Move MakeNextMove(Board board, Player player);
 }
