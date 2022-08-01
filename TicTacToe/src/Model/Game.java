@@ -53,6 +53,10 @@ public class Game {
         this.gameStatus = GameStatus.INPROGRESS;
     }
 
+    public static Builder create() {
+        return new Builder();
+    }
+
     public boolean undo() throws EmptyMovesUndoOperationException {
         // If the move size is 0, we can't undo.
         if (this.moves.size() == 0) {
@@ -78,6 +82,31 @@ public class Game {
         this.lastMovedPlayerIndex = (this.lastMovedPlayerIndex + this.players.size()) % this.players.size();
         this.moves.remove(lastMove);
         return true;
+    }
+
+    public void makeMove() {
+        this.lastMovedPlayerIndex += 1;
+        this.lastMovedPlayerIndex %= this.players.size();
+
+        Move move = this.players.get(this.lastMovedPlayerIndex)
+                .MakeMove(this.board);
+
+        this.moves.add(move);
+
+        move.getCell().setSymbol(move.getSymbol());
+
+        for (IGameWinningStrategy strategy: gameWinningStrategies) {
+            if (strategy.CheckIfWon(this.board, this.players.get(lastMovedPlayerIndex), move.getCell())) {
+                gameStatus = GameStatus.WON;
+                winner = this.players.get(lastMovedPlayerIndex);
+                return;
+            }
+        }
+
+        if (moves.size() == this.board.getDimension() * this.board.getDimension()) {
+            gameStatus = GameStatus.DRAW;
+            return;
+        }
     }
 
     public static class Builder

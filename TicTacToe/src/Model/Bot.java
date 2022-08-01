@@ -7,7 +7,7 @@ public class Bot extends Player{
     BotDifficultyLevel difficultyLevel;
     IBotPlayingStrategy botPlayingStrategy;
 
-    Bot(Symbol symbol, BotDifficultyLevel botDifficultyLevel) {
+    public Bot(Symbol symbol, BotDifficultyLevel botDifficultyLevel) {
         super(PlayerType.BOT, symbol);
 
         // We need Bot playing strategy

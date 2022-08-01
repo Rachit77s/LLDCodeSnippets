@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class HumanPlayer extends Player{
 
-    HumanPlayer(PlayerType type, Symbol symbol) {
-        super(type.HUMAN, symbol);
+    public HumanPlayer(Symbol symbol) {
+        super(PlayerType.HUMAN, symbol);
     }
 
     @Override

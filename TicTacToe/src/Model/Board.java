@@ -24,7 +24,7 @@ public class Board {
         }
 
     }
-    Cell getCell(int i, int j) {
+    public Cell getCell(int i, int j) {
         return board.get(i).get(j);
     }
 
@@ -32,5 +32,16 @@ public class Board {
         return board;
     }
 
-
+    public void printBoard() {
+        for (List<Cell> row: board) {
+            for (Cell cell: row) {
+                if (cell.getSymbol() == null) {
+                    System.out.print("|   |");
+                } else {
+                    System.out.printf("| " + cell.getSymbol().getCharacter() + " |");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
 }
