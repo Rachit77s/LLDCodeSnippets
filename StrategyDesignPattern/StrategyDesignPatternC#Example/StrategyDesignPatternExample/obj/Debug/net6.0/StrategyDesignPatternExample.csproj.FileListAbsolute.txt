@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\StrategyDesignPatternExample.exe
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\StrategyDesignPatternExample.deps.json
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\StrategyDesignPatternExample.runtimeconfig.json
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\StrategyDesignPatternExample.dll
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\ref\StrategyDesignPatternExample.dll
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\bin\Debug\net6.0\StrategyDesignPatternExample.pdb
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.AssemblyInfo.cs
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.dll
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\ref\StrategyDesignPatternExample.dll
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.pdb
+C:\Users\HP\Documents\GitHub\CodingQuestions\StrategyDesignPatternExample\StrategyDesignPatternExample\obj\Debug\net6.0\StrategyDesignPatternExample.genruntimeconfig.cache
