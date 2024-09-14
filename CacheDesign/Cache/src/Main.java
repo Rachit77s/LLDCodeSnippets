@@ -10,8 +10,9 @@ public class Main {
         Cache cacheObj = new Cache(EvictionStrategyEnum.LRU,
                 WriteStrategyEnum.WRITE_THROUGH,
                 new MySQLAdapter<>(),
-                3600);
-        
+                3600,
+                100);
+
         cacheObj.put("Rachit", 1);
         cacheObj.put("Rachit Srivastava", 2);
 
