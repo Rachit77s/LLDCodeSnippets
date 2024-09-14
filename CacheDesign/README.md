@@ -10,6 +10,18 @@ A flexible and extensible caching system with customizable eviction and write st
 - **Executor Support**: Uses executors to handle asynchronous operations if needed.
 - **TTL Support**: Time-to-live (TTL) for cached entries can be configured.
 
+- **Configurable Eviction Strategies**: 
+  - Least Recently Used (LRU)
+  - Least Frequently Used (LFU)
+
+- **Configurable Write Strategies**:
+  - Write-Back
+  - Write-Through
+
+- **Configurable Database Adapters**:  
+  - MySQL
+  - MongoDB
+
 
 ## Class Diagram
 
