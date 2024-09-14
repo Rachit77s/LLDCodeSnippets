@@ -11,6 +11,9 @@ public class Main {
                 WriteStrategyEnum.WRITE_THROUGH,
                 new MySQLAdapter<>(),
                 3600);
+        
+        cacheObj.put("Rachit", 1);
+        cacheObj.put("Rachit Srivastava", 2);
 
         System.out.println("Cache initialized!");
         System.out.println("Bye world!");
